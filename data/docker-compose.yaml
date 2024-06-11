@@ -1,0 +1,50 @@
+version: '3'
+
+services:
+  server:
+    restart: "no"
+    container_name: ark__crystal_isles
+    image: hermsi/ark-server:latest
+    volumes:
+      - /share/container-games/ark/crystal_isles:/app
+      - /share/container-games/ark/crystal_isles_backups:/home/steam/ARK-Backups
+    environment:
+      - SESSION_NAME=crystal_isles
+      - SERVER_MAP=CrystalIsles
+      - ADMIN_PASSWORD=pickler
+      - SERVER_PASSWORD=a
+      - MAX_PLAYERS=10
+      - ENABLE_CROSSPLAY=true
+      - DISABLE_BATTLEYE=true
+      - UPDATE_ON_START=true
+      - BACKUP_ON_STOP=true
+      - PRE_UPDATE_BACKUP=true
+      - WARN_ON_STOP=true
+      - GAME_MOD_IDS=731604991,1609138312
+    ports:
+      # Port for connections from ARK game client
+      - "7777:7777/udp"
+      # Raw UDP socket port (always Game client port +1)
+      - "7778:7778/udp"
+      # RCON management port
+      - "27020:27020/tcp"
+      # Steam's server-list port
+      - "27015:27015/udp"
+    networks:
+      qnet-static:
+        # static address for home use
+        ipv4_address: 192.168.1.91
+
+# configuration for use with a QNAP NAS
+networks:
+  qnet-static:
+    driver: qnet
+    driver_opts:
+      iface: "bond0"
+    ipam:
+      driver: qnet
+      options:
+        iface: "bond0"
+      config:
+        - subnet: 192.168.1.0/24 # CIDR format
+          gateway: 192.168.1.1 # router IP
