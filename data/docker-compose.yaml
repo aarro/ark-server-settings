@@ -5,6 +5,7 @@ services:
     restart: "no"
     container_name: ark__crystal_isles
     image: hermsi/ark-server:latest
+    command: --arkopt,-PrideColors
     volumes:
       - /share/container-games/ark/crystal_isles:/app
       - /share/container-games/ark/crystal_isles_backups:/home/steam/ARK-Backups
