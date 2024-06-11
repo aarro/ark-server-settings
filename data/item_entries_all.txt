@@ -679,6 +679,11 @@ ConfigOverrideSupplyCrateItems=(SupplyCrateClassString="SupplyCrate_Level35_C",M
     (SetWeight=1.0,MinNumItems=2,MaxNumItems=3,NumItemsPower=1.0,bItemsRandomWithoutReplacement=true,SetName="Ammo",
       ItemEntries=(
         (MinQuantity=5,EntryWeight=1.00,MaxQuantity=10,bForceBlueprint=false,ChanceToBeBlueprintOverride=0.0,ItemClassStrings=("PrimalItemC4Ammo_C")),
+        (MinQuantity=5,EntryWeight=1.00,MaxQuantity=10,bForceBlueprint=false,ChanceToBeBlueprintOverride=0.0,ItemClassStrings=("PrimalItem_WeaponClusterGrenade_C")),
+        (MinQuantity=5,EntryWeight=1.00,MaxQuantity=10,bForceBlueprint=false,ChanceToBeBlueprintOverride=0.0,ItemClassStrings=("PrimalItem_WeaponGrenade_C")),
+        (MinQuantity=5,EntryWeight=1.00,MaxQuantity=10,bForceBlueprint=false,ChanceToBeBlueprintOverride=0.0,ItemClassStrings=("PrimalItem_PlantSpeciesZ_Grenade_C")),
+        (MinQuantity=5,EntryWeight=1.00,MaxQuantity=10,bForceBlueprint=false,ChanceToBeBlueprintOverride=0.0,ItemClassStrings=("PrimalItem_PoisonGrenade_C")),
+        (MinQuantity=5,EntryWeight=1.00,MaxQuantity=10,bForceBlueprint=false,ChanceToBeBlueprintOverride=0.0,ItemClassStrings=("PrimalItem_GasGrenade_C")),
         (MinQuantity=5,EntryWeight=1.00,MaxQuantity=10,bForceBlueprint=false,ChanceToBeBlueprintOverride=0.0,ItemClassStrings=("PrimalItemAmmo_AggroTranqDart_C")),
         (MinQuantity=30,EntryWeight=1.0,MaxQuantity=60,bForceBlueprint=false,ChanceToBeBlueprintOverride=0.0,ItemClassStrings=("PrimalItemAmmo_AdvancedBullet_C")),
         (MinQuantity=30,EntryWeight=1.0,MaxQuantity=60,bForceBlueprint=false,ChanceToBeBlueprintOverride=0.0,ItemClassStrings=("PrimalItemAmmo_CompoundBowArrow_C")),
@@ -908,6 +913,8 @@ ConfigOverrideSupplyCrateItems=(SupplyCrateClassString="SupplyCrate_Level45_C",M
       ItemEntries=(
         (MinQuantity=4,EntryWeight=0.200,MaxQuantity=8,bForceBlueprint=false,ChanceToBeBlueprintOverride=0.0,ItemClassStrings=("PrimalItemTransGPSAmmo_C")),
         (MinQuantity=4,EntryWeight=0.200,MaxQuantity=8,bForceBlueprint=false,ChanceToBeBlueprintOverride=0.0,ItemClassStrings=("PrimalItemAmmo_CannonShell_C")),
+        (MinQuantity=4,EntryWeight=0.200,MaxQuantity=8,bForceBlueprint=false,ChanceToBeBlueprintOverride=0.0,ItemClassStrings=("PrimalItemAmmo_Boulder_Fire_C")),
+        (MinQuantity=4,EntryWeight=0.200,MaxQuantity=8,bForceBlueprint=false,ChanceToBeBlueprintOverride=0.0,ItemClassStrings=("PrimalItem_WeaponOilJar_C")),
         (MinQuantity=30,EntryWeight=1.0,MaxQuantity=60,bForceBlueprint=false,ChanceToBeBlueprintOverride=0.0,ItemClassStrings=("PrimalItemAmmo_AdvancedRifleBullet_C")),
         (MinQuantity=30,EntryWeight=1.0,MaxQuantity=60,bForceBlueprint=false,ChanceToBeBlueprintOverride=0.0,ItemClassStrings=("PrimalItemAmmo_AdvancedSniperBullet_C")),
         (MinQuantity=30,EntryWeight=1.0,MaxQuantity=60,bForceBlueprint=false,ChanceToBeBlueprintOverride=0.0,ItemClassStrings=("PrimalItemAmmo_Flamethrower_C")),
@@ -1355,6 +1362,9 @@ ConfigOverrideSupplyCrateItems=(SupplyCrateClassString="SupplyCrate_Level60_C",M
         (MinQuantity=1,MaxQuantity=1,bForceBlueprint=false,ChanceToBeBlueprintOverride=0.0,ItemClassStrings=("PrimalItemSkin_DinoBunnyHat_C")),
         (MinQuantity=1,MaxQuantity=1,bForceBlueprint=false,ChanceToBeBlueprintOverride=0.0,ItemClassStrings=("PrimalItemSkin_DinoSpecs_C")),
         (MinQuantity=1,MaxQuantity=1,bForceBlueprint=false,ChanceToBeBlueprintOverride=0.0,ItemClassStrings=("PrimalItemSkin_DinoWitchHat_C"))))))
+
+// These need to be in the final Game.ini file, but for brevity the contents have been removed. 
+// Personally, I just reuse the settings above, with the increased MinItemSets, MaxItemSets and NumItemSetsPower you can see below.
 ConfigOverrideSupplyCrateItems=(SupplyCrateClassString="SupplyCrate_Level03_Double_C",MinItemSets=6,MaxItemSets=8,NumItemSetsPower=1.75,bSetsRandomWithoutReplacement=true,ItemSets=((SetWeight=1.0,MinNumItems=2,MaxNumItems=2,NumItemsPower=1.0,bItemsRandomWithoutReplacement=true,SetName="Name",ItemEntries=())))
 ConfigOverrideSupplyCrateItems=(SupplyCrateClassString="SupplyCrate_Level15_Double_C",MinItemSets=6,MaxItemSets=8,NumItemSetsPower=1.75,bSetsRandomWithoutReplacement=true,ItemSets=((SetWeight=1.0,MinNumItems=2,MaxNumItems=2,NumItemsPower=1.0,bItemsRandomWithoutReplacement=true,SetName="Name",ItemEntries=())))
 ConfigOverrideSupplyCrateItems=(SupplyCrateClassString="SupplyCrate_Level25_Double_C",MinItemSets=6,MaxItemSets=8,NumItemSetsPower=1.75,bSetsRandomWithoutReplacement=true,ItemSets=((SetWeight=1.0,MinNumItems=2,MaxNumItems=2,NumItemsPower=1.0,bItemsRandomWithoutReplacement=true,SetName="Name",ItemEntries=())))
