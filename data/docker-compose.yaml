@@ -5,7 +5,7 @@ services:
     restart: "no"
     container_name: ark__crystal_isles
     image: hermsi/ark-server:latest
-    command: --arkopt,-PrideColors
+    command: --arkopt,-ForceAllowCaveFlyers
     volumes:
       - /share/container-games/ark/crystal_isles:/app
       - /share/container-games/ark/crystal_isles_backups:/home/steam/ARK-Backups
@@ -21,7 +21,7 @@ services:
       - BACKUP_ON_STOP=true
       - PRE_UPDATE_BACKUP=true
       - WARN_ON_STOP=true
-      - GAME_MOD_IDS=731604991,1609138312
+      - GAME_MOD_IDS=731604991,1565015734,1609138312,1967741708,2357644511,2824091110,2820647244,2541512967,3037257184,2984407853,2772103182
     ports:
       # Port for connections from ARK game client
       - "7777:7777/udp"
