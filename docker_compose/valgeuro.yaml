@@ -1,0 +1,44 @@
+---
+version: "3"
+services:
+  server:
+    restart: always
+    container_name: ark__valguerono
+    image: hermsi/ark-server:latest
+    command: --arkopt,-ForceAllowCaveFlyers
+    volumes:
+      - /share/container-games/ark/valguerono:/app
+      - /share/container-games/ark/valguerono_backups:/home/steam/ARK-Backups
+    environment:
+      - SESSION_NAME=valguerono
+      - SERVER_MAP=Valguero_P
+      - ADMIN_PASSWORD=pickler
+      - SERVER_PASSWORD=a
+      - MAX_PLAYERS=10
+      - ENABLE_CROSSPLAY=true
+      - DISABLE_BATTLEYE=true
+      - UPDATE_ON_START=true
+      - BACKUP_ON_STOP=true
+      - PRE_UPDATE_BACKUP=true
+      - WARN_ON_STOP=true
+      # - GAME_MOD_IDS=731604991,1565015734,1609138312,1967741708,2357644511,2824091110,2820647244,2541512967,3037257184,2984407853,2772103182
+    ports:
+      - 7777:7777/udp
+      - 7778:7778/udp
+      - 27020:27020/tcp
+      - 27015:27015/udp
+    networks:
+      qnet-static:
+        ipv4_address: 192.168.1.112
+networks:
+  qnet-static:
+    driver: qnet
+    driver_opts:
+      iface: bond0
+    ipam:
+      driver: qnet
+      options:
+        iface: bond0
+      config:
+        - subnet: 192.168.1.0/24
+          gateway: 192.168.1.1

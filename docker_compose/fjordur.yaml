@@ -1,0 +1,42 @@
+---
+version: "3"
+services:
+  server:
+    restart: unless-stopped
+    container_name: ark-se-asgard
+    image: hermsi/ark-server:latest
+    command: --arkopt,-ForceAllowCaveFlyers
+    volumes:
+      - /mnt/cache/appdata/ark-se/asgard:/app
+      - /mnt/cache/appdata/ark-se/asgard-backups:/home/steam/ARK-Backups
+    labels:
+      - net.unraid.docker.managed=dockerman
+      - net.unraid.docker.icon='https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/arkse.png'
+    environment:
+      - SESSION_NAME=asgard
+      - SERVER_MAP=Fjordur
+      - ADMIN_PASSWORD=pickler
+      - SERVER_PASSWORD=a
+      - MAX_PLAYERS=10
+      - ENABLE_CROSSPLAY=true
+      - DISABLE_BATTLEYE=true
+      - UPDATE_ON_START=true
+      - BACKUP_ON_STOP=true
+      - PRE_UPDATE_BACKUP=true
+      - WARN_ON_STOP=true
+      - GAME_MOD_IDS=1609138312,1967741708,731604991,2772103182,2541512967,1136125765
+      - UID'='99
+      - GID'='100
+      - TZ=America/Chicago
+    ports:
+      - 7777:7777/udp
+      - 7778:7778/udp
+      - 27020:27020/tcp
+      - 27015:27015/udp
+    networks:
+      br0:
+        ipv4_address: 192.168.1.112
+networks:
+  br0:
+    external: true
+    name: br0

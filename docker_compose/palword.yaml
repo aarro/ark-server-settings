@@ -1,0 +1,64 @@
+version: "3.8"
+
+services:
+  pal-server:
+    image: aarro/palserver:latest
+    restart: unless-stopped
+    container_name: palworld-server
+    stop_grace_period: 30s
+    ports:
+      - 8211:8211/udp
+    environment:
+      ADMIN_PASSWORD: "pickler"
+      ALLOW_CONNECT_PLATFORM: "Steam"
+      BACKUP_ENABLED: true
+      COMMUNITY: false
+      MULTITHREADING: false
+      PGID: 1000
+      PLAYERS: 8
+      PORT: 8211=
+      PUID: 1000
+      RCON_ENABLED: false
+      SERVER_DESCRIPTION: "palworld__delta"
+      SERVER_NAME: "palworld__delta"
+      SERVER_PASSWORD: "a"
+      TZ: "CST"
+      UPDATE_ON_BOOT: true
+      USE_BACKUP_SAVE_DATA: false # disable native backups
+      #
+      AUTO_SAVE_SPAN: 15 # in minutes
+      BASE_CAMP_MAX_NUM_IN_GUILD: 3
+      BUILD_OBJECT_DETERIORATION_DAMAGE_RATE: 0
+      CAN_PICKUP_OTHER_GUILD_DEATH_PENALTY_DROP: true
+      DAYTIME_SPEEDRATE: 0.5
+      DEATH_PENALTY: None
+      ENABLE_AIM_ASSIST_KEYBOARD: true
+      EXP_RATE: 1.5
+      IS_MULTIPLAY: true
+      IS_START_LOCATION_SELECT_BY_MAP: true
+      IS_PVP: false
+      NIGHTTIME_SPEEDRATE: 2
+      PLAYER_STOMACH_DECREASE_RATE: 0.5
+      PLAYER_STAMINA_DECREASE_RATE: 0.5
+      PAL_EGG_DEFAULT_HATCHING_TIME: 12 # '1' = 15min
+      PAL_STOMACH_DECREASE_RATE: 0.5
+      PAL_STAMINA_DECREASE_RATE: 0.5
+      WORK_SPEED_RATE: 2
+    volumes:
+      - /share/container-games/palworld/delta:/palworld
+    networks:
+      qnet-static:
+        ipv4_address: 192.168.1.112
+
+networks:
+  qnet-static:
+    driver: qnet
+    driver_opts:
+      iface: bond0
+    ipam:
+      driver: qnet
+      options:
+        iface: bond0
+      config:
+        - subnet: 192.168.1.0/24
+          gateway: 192.168.1.1
