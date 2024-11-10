@@ -295,11 +295,11 @@ ConfigOverrideSupplyCrateItems=(SupplyCrateClassString="SupplyCrate_Level15_C",M
     (SetWeight=2.0,MinNumItems=1,MaxNumItems=1,NumItemsPower=1.0,bItemsRandomWithoutReplacement=true,SetName="Saddles",
       ItemEntries=(
         (MinQuantity=1,EntryWeight=1.0,MaxQuantity=1,bForceBlueprint=false,ChanceToBeBlueprintOverride=0.5,ItemClassStrings=("PrimalItemArmor_CarnoSaddle_C")),
-        (MinQuantity=1,EntryWeight=1.0,MaxQuantity=1,bForceBlueprint=false,ChanceToBeBlueprintOverride=0.5,ItemClassStrings=("PrimalItemArmor_BeaverSaddle_C",ItemEntryName="Castoroides")),
+        (MinQuantity=1,EntryWeight=1.0,MaxQuantity=1,bForceBlueprint=false,ChanceToBeBlueprintOverride=0.5,ItemClassStrings=("PrimalItemArmor_BeaverSaddle_C"),ItemEntryName="Castoroides"),
         (MinQuantity=1,EntryWeight=1.0,MaxQuantity=1,bForceBlueprint=false,ChanceToBeBlueprintOverride=0.5,ItemClassStrings=("PrimalItemArmor_DiplodocusSaddle_C")),
         (MinQuantity=1,EntryWeight=1.0,MaxQuantity=1,bForceBlueprint=false,ChanceToBeBlueprintOverride=0.5,ItemClassStrings=("PrimalItemArmor_DireBearSaddle_C")),
         (MinQuantity=1,EntryWeight=1.0,MaxQuantity=1,bForceBlueprint=false,ChanceToBeBlueprintOverride=0.5,ItemClassStrings=("PrimalItemArmor_EquusSaddle_C")),
-        (MinQuantity=1,EntryWeight=1.0,MaxQuantity=1,bForceBlueprint=false,ChanceToBeBlueprintOverride=0.5,ItemClassStrings=("PrimalItemArmor_MilkgliderSaddle_C",ItemEntryName="Maewing")),
+        (MinQuantity=1,EntryWeight=1.0,MaxQuantity=1,bForceBlueprint=false,ChanceToBeBlueprintOverride=0.5,ItemClassStrings=("PrimalItemArmor_MilkgliderSaddle_C"),ItemEntryName="Maewing"),
         (MinQuantity=1,EntryWeight=1.0,MaxQuantity=1,bForceBlueprint=false,ChanceToBeBlueprintOverride=0.5,ItemClassStrings=("PrimalItemArmor_MegalodonSaddle_Tek_C")),
         (MinQuantity=1,EntryWeight=1.0,MaxQuantity=1,bForceBlueprint=false,ChanceToBeBlueprintOverride=0.5,ItemClassStrings=("PrimalItemArmor_MegatheriumSaddle_C")),
         (MinQuantity=1,EntryWeight=1.0,MaxQuantity=1,bForceBlueprint=false,ChanceToBeBlueprintOverride=0.5,ItemClassStrings=("PrimalItemArmor_PachyrhinoSaddle_C")),

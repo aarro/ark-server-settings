@@ -9,9 +9,6 @@ services:
     volumes:
       - /mnt/cache/appdata/ark-se/asgard:/app
       - /mnt/cache/appdata/ark-se/asgard-backups:/home/steam/ARK-Backups
-    labels:
-      - net.unraid.docker.managed=dockerman
-      - net.unraid.docker.icon='https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/arkse.png'
     environment:
       - SESSION_NAME=asgard
       - SERVER_MAP=Fjordur
@@ -24,7 +21,7 @@ services:
       - BACKUP_ON_STOP=true
       - PRE_UPDATE_BACKUP=true
       - WARN_ON_STOP=true
-      - GAME_MOD_IDS=1609138312,1967741708,731604991,2772103182,2541512967,1136125765
+      - GAME_MOD_IDS=731604991,1609138312,1967741708,2541512967,1136125765,2772103182
       - UID'='99
       - GID'='100
       - TZ=America/Chicago
